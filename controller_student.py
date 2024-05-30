@@ -15,9 +15,11 @@ class Student:
     def get_roll_no(self):
         return self.roll_no
 
+
 class StudentView:
     def print_student_details(self, student_name, student_roll_no):
         print(f"Student: {student_name}, Roll No: {student_roll_no}")
+
 
 class StudentController:
     def __init__(self, model, view):
@@ -38,6 +40,7 @@ class StudentController:
 
     def update_view(self):
         self.view.print_student_details(self.model.get_name(), self.model.get_roll_no())
+
 
 if __name__ == "__main__":
     model = Student("John Doe", "1234")

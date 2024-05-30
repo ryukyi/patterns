@@ -1,23 +1,28 @@
 from abc import ABC, abstractmethod
 
+
 # Strategy Interface
 class Strategy(ABC):
     @abstractmethod
     def execute(self) -> str:
         pass
 
+
 # Concrete Strategies
 class ConcreteStrategyA(Strategy):
     def execute(self) -> str:
         return "Strategy A execution"
 
+
 class ConcreteStrategyB(Strategy):
     def execute(self) -> str:
         return "Strategy B execution"
 
+
 class DefaultStrategy(Strategy):
     def execute(self) -> str:
         return "Default execution"
+
 
 # Context Class
 class Context:
@@ -33,6 +38,7 @@ class Context:
     def execute_strategy(self):
         result = self.strategy.execute()
         print(result)
+
 
 if __name__ == "__main__":
     # default

@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
 
+
 class SortingStrategy(ABC):
     @abstractmethod
     def sort(self, data):
-        pass 
+        pass
 
 
 class QuickSort(SortingStrategy):
@@ -11,13 +12,14 @@ class QuickSort(SortingStrategy):
         print("Using quicksort")
         # implement quicksort
         return sorted(data)
-    
+
+
 class MergeSort(SortingStrategy):
     def sort(self, data):
         print("Using mergesort")
         # implement merge sort
         return sorted(data)
-    
+
 
 class Context:
     def __init__(self, strategy: SortingStrategy):
@@ -28,7 +30,8 @@ class Context:
 
     def sort_data(self, data):
         return self.strategy.sort(data)
-    
+
+
 if __name__ == "__main__":
     # Data
     data_small = list(range(1000, 0, -1))

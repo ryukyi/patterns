@@ -1,5 +1,5 @@
 class Singleton:
-    _instance = None 
+    _instance = None
 
     def __new__(cls):
         # create new obj
@@ -7,7 +7,8 @@ class Singleton:
             cls._instance = super(Singleton, cls).__new__(cls)
         # point to existing
         return cls._instance
-    
+
+
 # Example usage
 singleton1 = Singleton()
 singleton2 = Singleton()

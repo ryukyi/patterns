@@ -13,6 +13,7 @@ class DatabaseConnection:
         # Execute the query on the database
         # This is a placeholder for actual database interaction logic
 
+
 if __name__ == "__main__":
     db_conn1 = DatabaseConnection("postgresql://localhost:5432/mydatabase")
     db_conn1.query("SELECT * FROM users")
@@ -20,4 +21,6 @@ if __name__ == "__main__":
     db_conn2 = DatabaseConnection("postgresql://localhost:5432/otherdatabase")
     db_conn2.query("SELECT * FROM products")
 
-    print(f"db_conn1 is db_conn2: {db_conn1 is db_conn2}")  # True, both are the same instance despite different initialization parameters
+    print(
+        f"db_conn1 is db_conn2: {db_conn1 is db_conn2}"
+    )  # True, both are the same instance despite different initialization parameters
