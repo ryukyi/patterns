@@ -173,7 +173,7 @@ if __name__ == "__main__":
     s.withdraw(200)
     logger.debug(s.balance)
     logger.debug(s.account_history.get_records())
-    s.withdraw(200) # This will raise WithdrawalAlreadyMadeThisMonth error
+    s.withdraw(200)  # This will raise WithdrawalAlreadyMadeThisMonth error
 
     c = CheckingAccount()
     c.deposit(2)
